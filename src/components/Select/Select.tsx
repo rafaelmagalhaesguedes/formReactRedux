@@ -1,3 +1,5 @@
+import { Label } from './Styles';
+
 type Props = {
   label: string,
   name: string,
@@ -16,7 +18,7 @@ function Select({
   options,
 }: Props) {
   return (
-    <label htmlFor={ name } className="label">
+    <Label htmlFor={ name }>
       { label }
       <div className="select">
         <select
@@ -34,7 +36,7 @@ function Select({
           }
         </select>
       </div>
-    </label>
+    </Label>
   );
 }
 

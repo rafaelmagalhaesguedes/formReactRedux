@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import { useDispatch } from 'react-redux';
 import Input from '../../components/Input/Input';
 import Button from '../../components/Button';
-import Select from '../../components/Select';
+import Select from '../../components/Select/Select';
 import { savePersonal } from '../../redux/actions';
 import { ContainerForm, Form, Title } from './Styles';
 
