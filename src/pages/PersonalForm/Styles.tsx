@@ -15,6 +15,17 @@ export const Form = styled.form`
   border-radius: 10px;
   padding: 30px;
   width: 30rem;
+
+  .button-form {
+    background: #272643;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+  }
 `;
 
 export const Title = styled.h1`

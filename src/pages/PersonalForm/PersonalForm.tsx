@@ -109,7 +109,7 @@ function PersonalForm() {
           onClick={ handleSubmit }
           type="submit"
           label="Próximo"
-          moreClasses="is-fullwidth is-info"
+          moreClasses="button-form"
         />
       </Form>
 
