@@ -8,7 +8,7 @@ type Props = {
 function Button({ label, onClick = () => {}, type = 'button', moreClasses = '' }: Props) {
   return (
     <button
-      className={ `button ${moreClasses}` }
+      className={ `${moreClasses}` }
       type={ type }
       onClick={ onClick }
     >

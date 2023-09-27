@@ -8,7 +8,7 @@ function Home() {
       <Link to="/personal-form">
         <Button
           label="Preencher Formulário"
-          moreClasses="text-center is-info is-large is-fullwidth"
+          moreClasses="button-home"
           type="button"
         />
       </Link>
