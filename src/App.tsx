@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router';
 import Home from './pages/Home/Home';
 import PersonalForm from './pages/PersonalForm/PersonalForm';
-import ProfessionalForm from './pages/ProfessionalForm';
+import ProfessionalForm from './pages/ProfessionalForm/ProfessionalForm';
 import FormDisplay from './pages/FormDisplay';
 
 function App() {
