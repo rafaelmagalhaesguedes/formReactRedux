@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router';
 import Home from './pages/Home/Home';
-import PersonalForm from './pages/PersonalForm';
+import PersonalForm from './pages/PersonalForm/PersonalForm';
 import ProfessionalForm from './pages/ProfessionalForm';
 import FormDisplay from './pages/FormDisplay';
 
