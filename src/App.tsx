@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router';
 import Home from './pages/Home/Home';
 import PersonalForm from './pages/PersonalForm/PersonalForm';
 import ProfessionalForm from './pages/ProfessionalForm/ProfessionalForm';
-import FormDisplay from './pages/FormDisplay';
+import FormDisplay from './pages/FormDisplay/FormDisplay';
 
 function App() {
   return (
