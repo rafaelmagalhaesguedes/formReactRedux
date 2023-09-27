@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
   display: flex;
-  background-color: #f56038;
+  background-color: #272643;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -10,9 +10,10 @@ export const Section = styled.section`
 
   .button-home {
     border: none;
+    border-radius: 50px;
     padding: 20px;
-    color: white;
-    background: #071952;
+    color: black;
+    background: #e3f6f5;
     font-size: 1rem;
     font-weight: 900;
     width: 20rem;
