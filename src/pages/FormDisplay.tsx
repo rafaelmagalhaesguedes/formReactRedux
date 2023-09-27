@@ -1,43 +1,51 @@
+import { useSelector } from 'react-redux';
+import { Data } from '../types';
+
 function FormDisplay() {
-  // Recupere as informações do seu estado criado no Redux
+  const root = useSelector((state: Data) => state);
+  const { personalData, professionalData } = root;
+
+  const { name, email, cpf, address, city, uf } = personalData;
+  const { resume, role, description } = professionalData;
+
   return (
     <section>
       <h1>Dados Enviados</h1>
       <div>
         Nome:
-        {/* { name } */}
+        { name }
       </div>
       <div>
         Email:
-        {/* { email } */}
+        { email }
       </div>
       <div>
         CPF:
-        {/* { cpf } */}
+        { cpf }
       </div>
       <div>
         Endereço:
-        {/* { address } */}
+        { address }
       </div>
       <div>
         Cidade:
-        {/* { city } */}
+        { city }
       </div>
       <div>
         Estado:
-        {/* { uf } */}
+        { uf }
       </div>
       <div>
         Currículo:
-        {/* { resume } */}
+        { resume }
       </div>
       <div>
         Cargo:
-        {/* { role } */}
+        { role }
       </div>
       <div>
         Descrição do cargo:
-        {/* { description } */}
+        { description }
       </div>
     </section>
   );

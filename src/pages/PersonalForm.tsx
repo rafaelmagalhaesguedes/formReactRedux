@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
+import { useDispatch } from 'react-redux';
 import Input from '../components/Input';
 import Button from '../components/Button';
 import Select from '../components/Select';
+import { savePersonal } from '../redux/actions';
 
 const UF_LIST = [
   'Rio de Janeiro',
@@ -15,6 +17,7 @@ const UF_LIST = [
 ];
 
 function PersonalForm() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
@@ -45,6 +48,7 @@ function PersonalForm() {
 
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
+    dispatch(savePersonal(form));
     if (validate()) navigate('/professional-form');
   };
 

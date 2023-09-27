@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
+import { useDispatch } from 'react-redux';
+import { saveProfessional } from '../redux/actions';
 import Input from '../components/Input';
 import TextArea from '../components/TextArea';
 import Button from '../components/Button';
 
 function ProfessionalForm() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [form, setForm] = useState({
     resume: '',
     role: '',
@@ -26,6 +29,7 @@ function ProfessionalForm() {
 
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
+    dispatch(saveProfessional(form));
     if (validate) navigate('/form-display');
   };
 

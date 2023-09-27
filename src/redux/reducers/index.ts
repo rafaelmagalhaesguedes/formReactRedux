@@ -44,8 +44,8 @@ const professionalReducer = (
 };
 
 const rootReducer = combineReducers({
-  personalReducer,
-  professionalReducer,
+  personalData: personalReducer,
+  professionalData: professionalReducer,
 });
 
 export default rootReducer;
