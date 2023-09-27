@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { useDispatch } from 'react-redux';
 import { saveProfessional } from '../redux/actions';
-import Input from '../components/Input';
+import Input from '../components/Input/Input';
 import TextArea from '../components/TextArea';
 import Button from '../components/Button';
 

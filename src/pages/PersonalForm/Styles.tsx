@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ContainerForm = styled.div`
   display: flex;
   flex-direction: column;
-  background: white;
+  background: #0a2f35;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -11,12 +11,14 @@ export const ContainerForm = styled.div`
 `;
 
 export const Form = styled.form`
-  background: #D0E762;
+  background: #f56038;
   border-radius: 10px;
   padding: 30px;
-  width: 20rem;
+  width: 30rem;
 `;
 
 export const Title = styled.h1`
-  font-size: 2.2rem;
+  font-size: 2rem;
+  color: black;
+  margin: 20px 0;
 `;

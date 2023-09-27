@@ -1,3 +1,5 @@
+import { Control, Label, InputForm } from './Styles';
+
 type Props = {
   type: string,
   label: string,
@@ -9,11 +11,10 @@ type Props = {
 
 function Input({ type, name, label, onChange, value, required = false }: Props) {
   return (
-    <label className="label" htmlFor={ name }>
+    <Label htmlFor={ name }>
       { label }
-      <div className="control">
-        <input
-          className="input"
+      <Control>
+        <InputForm
           type={ type }
           name={ name }
           value={ value }
@@ -21,8 +22,8 @@ function Input({ type, name, label, onChange, value, required = false }: Props) 
           id={ name }
           required={ required }
         />
-      </div>
-    </label>
+      </Control>
+    </Label>
   );
 }
 
