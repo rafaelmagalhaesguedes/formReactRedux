@@ -3,7 +3,7 @@ import { PROFESSIONAL_DATA } from '../actions';
 
 type ActionType = {
   type: string,
-  data: Data,
+  payload: Data,
 };
 
 const INITIAL_STATE = {
@@ -15,7 +15,7 @@ const INITIAL_STATE = {
 const professionalReducer = (state = INITIAL_STATE, action: ActionType) => {
   switch (action.type) {
     case PROFESSIONAL_DATA:
-      return { ...state, ...action.data };
+      return { ...state, ...action.payload };
     default:
       return state;
   }

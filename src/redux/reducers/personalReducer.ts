@@ -3,7 +3,7 @@ import { PERSONAL_DATA } from '../actions';
 
 type ActionType = {
   type: string,
-  data: Data,
+  payload: Data,
 };
 
 const INITIAL_STATE = {
@@ -18,7 +18,7 @@ const INITIAL_STATE = {
 const personalReducer = (state = INITIAL_STATE, action: ActionType) => {
   switch (action.type) {
     case PERSONAL_DATA:
-      return { ...state, ...action.data };
+      return { ...state, ...action.payload };
     default:
       return state;
   }
