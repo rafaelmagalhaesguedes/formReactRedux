@@ -4,7 +4,6 @@ import { Data } from '../types';
 function FormDisplay() {
   const root = useSelector((state: Data) => state);
   const { personalData, professionalData } = root;
-
   const { name, email, cpf, address, city, uf } = personalData;
   const { resume, role, description } = professionalData;
 
@@ -12,40 +11,40 @@ function FormDisplay() {
     <section>
       <h1>Dados Enviados</h1>
       <div>
-        Nome:
-        { name }
+        {`Nome:
+        ${name}`}
       </div>
       <div>
-        Email:
-        { email }
+        {`Email:
+        ${email}`}
       </div>
       <div>
-        CPF:
-        { cpf }
+        {`CPF:
+        ${cpf}`}
       </div>
       <div>
-        Endereço:
-        { address }
+        {`Endereço:
+        ${address}`}
       </div>
       <div>
-        Cidade:
-        { city }
+        {`Cidade:
+        ${city}`}
       </div>
       <div>
-        Estado:
-        { uf }
+        {`Estado:
+        ${uf}`}
       </div>
       <div>
-        Currículo:
-        { resume }
+        {`Currículo:
+        ${resume}`}
       </div>
       <div>
-        Cargo:
-        { role }
+        {`Cargo:
+        ${role}`}
       </div>
       <div>
-        Descrição do cargo:
-        { description }
+        {`Descrição do cargo:
+        ${description}`}
       </div>
     </section>
   );
