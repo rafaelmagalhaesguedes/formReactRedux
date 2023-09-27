@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
-import Button from '../components/Button';
+import Button from '../../components/Button';
+import { Section } from './Styles';
 
 function Home() {
   return (
-    <section>
+    <Section>
       <Link to="/personal-form">
         <Button
           label="Preencher Formulário"
@@ -11,7 +12,7 @@ function Home() {
           type="button"
         />
       </Link>
-    </section>
+    </Section>
   );
 }
 
