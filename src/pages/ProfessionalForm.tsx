@@ -1,10 +1,11 @@
 import { useState } from 'react';
-
+import { useNavigate } from 'react-router';
 import Input from '../components/Input';
 import TextArea from '../components/TextArea';
 import Button from '../components/Button';
 
 function ProfessionalForm() {
+  const navigate = useNavigate();
   const [form, setForm] = useState({
     resume: '',
     role: '',
@@ -21,13 +22,15 @@ function ProfessionalForm() {
     setForm({ ...form, [name]: value });
   };
 
+  const validate = resume.length > 0 && role.length > 0 && description.length > 0;
+
+  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+    if (validate) navigate('/form-display');
+  };
+
   return (
-    <form
-      onSubmit={ (e) => {
-        e.preventDefault();
-        console.log('Ao clicar, envie a informação do formulário');
-      } }
-    >
+    <form>
       <h1 className="title">Informações Profissionais</h1>
       <TextArea
         label="Resumo do currículo: "
@@ -54,6 +57,7 @@ function ProfessionalForm() {
         required
       />
       <Button
+        onClick={ handleSubmit }
         type="submit"
         label="Enviar"
         moreClasses="is-fullwidth is-info"

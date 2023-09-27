@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { useNavigate } from 'react-router';
 import Input from '../components/Input';
 import Button from '../components/Button';
 import Select from '../components/Select';
@@ -15,6 +15,8 @@ const UF_LIST = [
 ];
 
 function PersonalForm() {
+  const navigate = useNavigate();
+
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -25,6 +27,15 @@ function PersonalForm() {
   });
   const { name, email, cpf, address, city, uf } = form;
 
+  const validate = () => {
+    return name.length > 0
+      && email.length > 0
+      && cpf.length > 0
+      && address.length > 0
+      && city.length > 0
+      && uf.length > 0;
+  };
+
   const handleChange = (
     { target }: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => {
@@ -32,13 +43,13 @@ function PersonalForm() {
     setForm({ ...form, [targetName]: value });
   };
 
+  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+    if (validate()) navigate('/professional-form');
+  };
+
   return (
-    <form
-      onSubmit={ (e) => {
-        e.preventDefault();
-        console.log('Ao clicar, envie a informação do formulário');
-      } }
-    >
+    <form>
       <h1 className="title">Informações Pessoais</h1>
       <Input
         label="Nome: "
@@ -89,6 +100,7 @@ function PersonalForm() {
         options={ UF_LIST }
       />
       <Button
+        onClick={ handleSubmit }
         type="submit"
         label="Próximo"
         moreClasses="is-fullwidth is-info"
