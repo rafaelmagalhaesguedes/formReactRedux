@@ -7,11 +7,9 @@ type ActionType = {
 };
 
 const INITIAL_STATE = {
-  professionalData: {
-    resume: '',
-    role: '',
-    description: '',
-  },
+  resume: '',
+  role: '',
+  description: '',
 };
 
 const professionalReducer = (state = INITIAL_STATE, action: ActionType) => {

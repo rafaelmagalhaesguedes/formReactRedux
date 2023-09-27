@@ -7,14 +7,12 @@ type ActionType = {
 };
 
 const INITIAL_STATE = {
-  personalData: {
-    name: '',
-    email: '',
-    cpf: '',
-    address: '',
-    city: '',
-    uf: '',
-  },
+  name: '',
+  email: '',
+  cpf: '',
+  address: '',
+  city: '',
+  uf: '',
 };
 
 const personalReducer = (state = INITIAL_STATE, action: ActionType) => {
